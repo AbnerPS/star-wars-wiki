@@ -1,0 +1,52 @@
+/* paleta de cores 
+#252422
+#46494c
+#403d39
+#4c5c68
+#ffd23f*/
+
+#home-page {
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+header h1 {
+    margin-left: 500px; /*mudar isso aqui depois*/
+    color: #ffd23f;
+}
+
+.menu-bar a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #FFF;
+    padding: 5px;
+    margin: 0px 20px;
+}
+
+.menu-bar svg {
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+ .menu-bar a:hover {
+     border-bottom: solid 2px #ffd23f;
+     border-radius: 10px;
+}
+
+#content {
+    display: flex;
+    float: left;
+    border-right: solid 2px #46494c;
+}
+
+#extras {
+    display: flex;
+    float: right;
+    border-left: solid 2px #46494c;
+}
+
