@@ -1,28 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FiSearch } from 'react-icons/fi'
+import { FiArrowRight } from 'react-icons/fi'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
+import logo from '../../assets/logoYellow.png'
 import './styles.css'
 
+
 const Home = () => {
+
     return (
         <div id="home-page">
-            <header>
-                <h1>Star Wars</h1>
-                <div className="menu-bar">
-                    <Link>Home</Link>
-                    <Link>Personagens</Link>
-                    <Link>Planetas</Link>
-                    <Link>Espaço-Naves</Link>
-                    <FiSearch />
-                </div>
-            </header>
+            <Header/>
 
             <div id="content">
-                <h1>Conteudo Aqui</h1>
+                <img src={logo}/>
             </div>
-            <div id="extras">
-                <h1>Extras Aqui</h1>
-            </div>
+
+            <Footer/>
+            
         </div>
     )
 }

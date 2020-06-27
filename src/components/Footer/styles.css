@@ -1,0 +1,43 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(37, 36, 34, 0.8);
+    padding: 20px;
+
+}
+
+footer .contato {
+    justify-content: space-around;
+    margin: 10px;
+}
+
+footer span {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+footer .contato a {
+    text-decoration: none;
+    margin: 10px;
+    color: #FFF;
+    border: solid 2px rgba(0, 0, 0, 0.0);
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 18px;
+}
+
+footer .contato a:hover {
+    color: #ffd23f;
+    border-color:#ffd23f;
+    transition: 0.8s;
+}
+
+footer .contato a svg {
+    font-size: 20px;
+}
+
+footer .contato img {
+    width: 200px;
+    border-radius: 50%;
+}

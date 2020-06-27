@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    font-family: Starjedi;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(37, 36, 34, 0.8);
+    padding: 20px 0px;
+}
+
+header img {
+    margin-left: 300px;
+}
+
+
+
+.menu-bar a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #FFF;
+    padding: 5px;
+    margin: 0px 20px;
+}
+
+.menu-bar svg {
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+ .menu-bar a:hover {
+     border-bottom: solid 2px #ffd23f;
+     border-radius: 10px;
+}

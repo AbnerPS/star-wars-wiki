@@ -1,0 +1,72 @@
+/* paleta de cores 
+#252422
+#46494c
+#403d39
+#4c5c68
+#ffd23f*/
+
+#content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#content .card {
+    display: flex;
+    flex-direction: column;
+    width: 21%;
+    border-radius: 30px 2px;
+    padding: 20px;
+    margin-bottom: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(37, 36, 34, 0.5);
+    
+}
+
+#content .card:hover {
+    box-shadow: 10px 10px #f5faff;
+    padding: 25px;
+    background-color: rgba(37, 36, 34, 0.8);
+    transition: 0.5s;
+}
+
+#content .card a{
+    text-decoration: none;
+    color: #000;
+    background-color: #ffd23f;
+    border-radius: 5px;
+    padding: 5px 0px;
+    width: 100px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#content .card span {
+    margin-top: 10px;
+}
+
+.next-page {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.next-page a {
+    text-decoration: none;
+    color: #000;
+    background-color: #ffd23f;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.next-page a span {
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.next-page a span svg {
+    font-size: 18px;
+}
