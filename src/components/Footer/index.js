@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebook, FaLinkedin, FaGithub, FaInstagram, FaJediOrder} from 'react-icons/fa'
+import { FaCodepen, FaLinkedin, FaGithub, FaJediOrder} from 'react-icons/fa'
 import foto from '../../assets/FotoPerfil.jpg'
 import './styles.css'
 
@@ -7,28 +7,33 @@ function Footer() {
     return (
     <footer>
         <div className="fonte-api">
-            <FaJediOrder/>
-            <span>Star Wars API: https://swapi.dev/</span>
+            <a href="https://swapi.dev/" target="_blank" rel="noopener noreferrer">
+                <span>Star Wars API <FaJediOrder/></span>
+            </a>
         </div>
                 
-        <div className="contato">
-            <img src={foto}/>
-            <span>Desenvolvido por: Abner Pereira Silva</span>
-                <a href="https://www.facebook.com/AbnerGuthiwill" target="_blank"
+        <div className="criador">
+            <span>Desenvolvido por <strong>Abner Pereira Silva</strong></span>
+            <img src={foto} alt="Foto Perfil"/>
+            <span><strong>Desenvolvedor Full Stack</strong></span>      
+        </div>
+        
+        <div className="redes-sociais">
+            <span>Minhas redes sociais</span>
+            <a href="https://codepen.io/Abner_Silva" target="_blank"
                 rel="noopener noreferrer">
-                    <FaFacebook/>
+                    <FaCodepen/>
+                    <span>CodePen</span>
                 </a>
                 <a href="https://www.linkedin.com/in/abner-pereira-silva-8715a326/" target="_blank"
                 rel="noopener noreferrer">
                     <FaLinkedin/>
+                    <span>Linkedin</span>
                 </a>
                 <a href="https://github.com/AbnerPS" target="_blank"
                 rel="noopener noreferrer">
                     <FaGithub/>
-                </a>
-                <a href="https://www.instagram.com/abner.p.s/?hl=pt-br" target="_blank"
-                rel="noopener noreferrer">
-                    <FaInstagram/>
+                    <span>GitHub</span>
                 </a>
         </div>
     </footer>

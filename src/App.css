@@ -39,7 +39,7 @@
 body {
   background-color: #252422;
   color: #FFF;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Cairo', sans-serif;
   background-image: url('./assets/background.webp');
 }
 

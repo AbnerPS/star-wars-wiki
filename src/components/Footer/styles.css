@@ -2,13 +2,9 @@ footer {
     display: flex;
     justify-content: space-around;
     background-color: rgba(37, 36, 34, 0.8);
-    padding: 20px;
-
-}
-
-footer .contato {
-    justify-content: space-around;
-    margin: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: 'Cairo', sans-serif;
 }
 
 footer span {
@@ -17,27 +13,52 @@ footer span {
     margin-bottom: 20px;
 }
 
-footer .contato a {
+footer .fonte-api a{
     text-decoration: none;
     margin: 10px;
     color: #FFF;
-    border: solid 2px rgba(0, 0, 0, 0.0);
-    border-radius: 10px;
-    padding: 10px;
-    padding-top: 18px;
 }
 
-footer .contato a:hover {
+footer .fonte-api a:hover {
+    color: #ffd23f;
+    transition: 0.8s;
+}
+
+footer .fonte-api a svg {
+    font-size: 90px;
+}
+
+footer .criador {
+}
+
+footer .criador img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+footer .redes-sociais a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FFF;
+    border: solid 2px rgba(0, 0, 0, 0.0);
+    border-radius: 10px;
+    /* padding: 20px -0px 0px 0px; */
+}
+
+footer .redes-sociais a span {
+    margin-top: 18px;
+}
+
+footer .redes-sociais a:hover {
     color: #ffd23f;
     border-color:#ffd23f;
     transition: 0.8s;
 }
 
-footer .contato a svg {
+footer .redes-sociais a svg {
     font-size: 20px;
-}
-
-footer .contato img {
-    width: 200px;
-    border-radius: 50%;
+    margin-right: 10px;
 }

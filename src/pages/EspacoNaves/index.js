@@ -4,25 +4,44 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import { FiArrowRight } from 'react-icons/fi'
+import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
 import './styles.css'
 
 
 const EspacoNaves = () => {
-    const [personagens, setPersonagens] = useState([])
+    const [page, setPage] = useState(1)
     const [countEspacoNaves, setCountEspacoNaves] = useState(0)
-    const [planetas, setPlanetas] = useState([])
     const [espacoNaves, setEspacoNaves] = useState([])
 
     useEffect(() => {
-        axios.get('https://swapi.dev/api/starships/').then(response => {
+        axios.get(`https://swapi.dev/api/starships/?page=${page}`).then(response => {
             const contagem = response.data.count
-            console.log(response.data);
-            const espacoNaves = response.data.results
+            const naves = response.data.results
+
             setCountEspacoNaves(contagem)
-            setEspacoNaves(espacoNaves)
+            setEspacoNaves(naves)
+
+            response.data.next === null ?
+            document.getElementById('btnNext').style.display = 'none' :
+            document.getElementById('btnNext').style.display = 'block'
+
+            response.data.previous === null ?
+            document.getElementById('btnPrevious').style.display = 'none' :
+            document.getElementById('btnPrevious').style.display = 'block'
         })
-    }, [])
+    }, [page])
+
+    function handleNextPage() {
+        const currentPage = page + 1
+        setPage(currentPage)
+        console.log(page)
+    }
+
+    function handlePreviousPage() {
+        const currentPage = page - 1
+        setPage(currentPage)
+        console.log(page)
+    }
 
     return (
         <div id="main">
@@ -50,12 +69,10 @@ const EspacoNaves = () => {
                 </div>
                 ))}
             </div>
-            <div className="next-page">
-                <Link to="#">Próxima página 
-                    <span>
-                        <FiArrowRight/>
-                    </span>
-                </Link>
+            <div className="navigation-page">
+                <button id="btnPrevious" onClick={handlePreviousPage}><FaArrowCircleLeft/>PÁGINA ANTERIOR</button>
+
+                <button id="btnNext" onClick={handleNextPage}>PRÓXIMA PÁGINA<FaArrowCircleRight/></button>
             </div>
 
             <Footer/>

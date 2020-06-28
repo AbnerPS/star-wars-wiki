@@ -1,24 +1,21 @@
 header {
     display: flex;
     font-family: Starjedi;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: rgba(37, 36, 34, 0.8);
     padding: 20px 0px;
+    margin-bottom: 20px;
 }
-
-header img {
-    margin-left: 300px;
-}
-
-
 
 .menu-bar a{
     font-size: 18px;
     text-decoration: none;
     color: #FFF;
-    padding: 5px;
+    border-radius: 10px;
+    padding: 2px 10px;
     margin: 0px 20px;
+    font-family: 'Cairo', sans-serif;
 }
 
 .menu-bar svg {
@@ -27,6 +24,7 @@ header img {
 }
 
  .menu-bar a:hover {
+     color: #ffd23f;
      border-bottom: solid 2px #ffd23f;
-     border-radius: 10px;
+     transition: 0.2s;
 }

@@ -6,12 +6,12 @@ import './styles.css'
 function Header(){
     return (
     <header>
-        <img src={logo} alt="Logo Star Wars"></img>
+        <Link to="/"><img src={logo} alt="Logo Star Wars"></img></Link>
         <nav className="menu-bar">
-            <Link to="/">HOME</Link>
-            <Link to="/personagens">PERSONAGENS</Link>
-            <Link to="/planetas">PLANETAS</Link>
-            <Link to="/espaco-naves">ESPAÇO-NAVES</Link>
+            <Link to="/" className="home">HOME</Link>
+            <Link to="/personagens" className="personagens">PERSONAGENS</Link>
+            <Link to="/planetas" className="planetas">PLANETAS</Link>
+            <Link to="/espaco-naves" className="naves">ESPAÇO-NAVES</Link>
         </nav>
     </header>
     )

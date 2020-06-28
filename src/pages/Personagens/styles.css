@@ -1,10 +1,3 @@
-/* paleta de cores 
-#252422
-#46494c
-#403d39
-#4c5c68
-#ffd23f*/
-
 #content {
     display: flex;
     justify-content: space-around;
@@ -15,18 +8,16 @@
 #content .card {
     display: flex;
     flex-direction: column;
-    width: 21%;
+    width: 17%;
     border-radius: 30px 2px;
-    padding: 20px;
+    padding: 25px;
     margin-bottom: 80px;
-    font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(37, 36, 34, 0.5);
     
 }
 
 #content .card:hover {
     box-shadow: 10px 10px #f5faff;
-    padding: 25px;
     background-color: rgba(37, 36, 34, 0.8);
     transition: 0.5s;
 }
@@ -46,27 +37,33 @@
     margin-top: 10px;
 }
 
-.next-page {
+.navigation-page {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    margin-bottom: 50px;
+    justify-content: space-around;
 }
 
-.next-page a {
-    text-decoration: none;
+.navigation-page button {
+    font-size: 15px;
     color: #000;
     background-color: #ffd23f;
     padding: 8px;
-    border-radius: 5px;
+    border: none;
+    border-radius: 10px;
 }
 
-.next-page a span {
-    padding: 5px;
-    margin-left: 5px;
+.navigation-page #btnPrevious:hover {
+    border-radius: 2px 20px;
+    padding: 10px;
+    transition: 0.5s;
 }
 
-.next-page a span svg {
-    font-size: 18px;
+.navigation-page #btnNext:hover {
+    border-radius: 20px 2px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.navigation-page button svg {
+    margin: 0px 5px;
+    font-size: 20px;
 }
