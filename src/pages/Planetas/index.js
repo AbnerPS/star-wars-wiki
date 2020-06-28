@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
-import './styles.css'
+import './planetas.css'
 
 
 const Planetas = () => {
@@ -50,7 +50,7 @@ const Planetas = () => {
             <h1>TOTAL DE PLANETAS: {countPlanetas}</h1>
             <div id="content">
                 {planetas.map(planetas => (
-                    <div className="card" key={planetas.name}>
+                    <div className="card-planetas" key={planetas.name}>
                     <h2>{planetas.name}</h2>
                     <span>Periodo de Rotação: {planetas.rotation_period}</span>
                     <span>Periodo de Orbita: {planetas.orbital_period}</span>
@@ -65,6 +65,7 @@ const Planetas = () => {
                 </div>
                 ))}
             </div>
+
             <div className="navigation-page">
                 <button id="btnPrevious" onClick={handlePreviousPage}><FaArrowCircleLeft/>PÁGINA ANTERIOR</button>
 

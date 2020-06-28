@@ -8,7 +8,7 @@ header {
     margin-bottom: 20px;
 }
 
-.menu-bar a{
+header .menu-bar a{
     font-size: 18px;
     text-decoration: none;
     color: #FFF;
@@ -18,12 +18,12 @@ header {
     font-family: 'Cairo', sans-serif;
 }
 
-.menu-bar svg {
+header .menu-bar svg {
     font-size: 30px;
     margin-right: 20px;
 }
 
- .menu-bar a:hover {
+header .menu-bar a:hover {
      color: #ffd23f;
      border-bottom: solid 2px #ffd23f;
      transition: 0.2s;

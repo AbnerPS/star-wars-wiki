@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
-import './styles.css'
+import './naves.css'
 
 
 const EspacoNaves = () => {
@@ -50,7 +50,7 @@ const EspacoNaves = () => {
             <h1>TOTAL DE ESPAÇO NAVES: {countEspacoNaves}</h1>
             <div id="content">
                 {espacoNaves.map(espacoNaves => (
-                    <div className="card" key={espacoNaves.name}>
+                    <div className="card-naves" key={espacoNaves.name}>
                     <h2>{espacoNaves.name}</h2>
                     <span>Modelo: {espacoNaves.model}</span>
                     <span>Fabricante: {espacoNaves.manufacturer}</span>

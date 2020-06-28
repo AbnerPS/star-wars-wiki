@@ -1,12 +1,12 @@
-import React, { Children } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import './styles.css'
+import './card.css'
 
 function Card(props) {
     return (
     <div className="card">
         {props.conteudo}
-        <Link to="#">Ver mais</Link>
+        <Link to={props.url}>Ver mais</Link>
     </div>
     )
 }

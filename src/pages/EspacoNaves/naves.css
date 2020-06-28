@@ -5,7 +5,7 @@
     align-content: center;
 }
 
-#content .card {
+#content .card-naves {
     display: flex;
     flex-direction: column;
     width: 17%;
@@ -16,13 +16,13 @@
     
 }
 
-#content .card:hover {
+#content .card-naves:hover {
     box-shadow: 10px 10px #f5faff;
     background-color: rgba(37, 36, 34, 0.8);
     transition: 0.5s;
 }
 
-#content .card a{
+#content .card-naves a{
     text-decoration: none;
     color: #000;
     background-color: #ffd23f;
@@ -33,7 +33,7 @@
     margin-top: 20px;
 }
 
-#content .card span {
+#content .card-naves span {
     margin-top: 10px;
 }
 

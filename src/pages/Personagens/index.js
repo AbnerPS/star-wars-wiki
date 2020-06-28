@@ -2,10 +2,11 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { FormattedMessage } from 'react-intl'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
-import './styles.css'
+import './personagens.css'
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
             setCountPersonagens(contagem)
             setPersonagens(personagens)
 
+            // paginação
             response.data.next === null ?
             document.getElementById('btnNext').style.display = 'none' :
             document.getElementById('btnNext').style.display = 'block'
@@ -47,13 +49,13 @@ const Home = () => {
         <div id="main">
             <Header/>
 
-            <h1>Total de persoganes: {countPersonagens}</h1>
+            <h1>TOTAL DE PERSONAGENS: {countPersonagens}</h1>
             <div id="content">
                 {personagens.map(personagens => (
-                <div className="card" key={personagens.name}>
+                <div className="card-personagem" key={personagens.name}>
                     <h2>{personagens.name}</h2>
-                    <span>Altura: {personagens.height}</span>
-                    <span>Peso: {personagens.mass}</span>
+                    <span>Altura: {personagens.height / 100} m</span>
+                    <span>Peso: {personagens.mass} kg</span>
                     <span>Cor do Cabelo: {personagens.hair_color}</span>
                     <span>Cor da Pele: {personagens.skin_color}</span>
                     <span>Cor dos Olhos: {personagens.eye_color}</span>

@@ -2,9 +2,9 @@ footer {
     display: flex;
     justify-content: space-around;
     background-color: rgba(37, 36, 34, 0.8);
-    padding: 10px;
     margin-top: 20px;
     font-family: 'Cairo', sans-serif;
+    padding: 10px 0px;
 }
 
 footer span {
@@ -15,41 +15,47 @@ footer span {
 
 footer .fonte-api a{
     text-decoration: none;
-    margin: 10px;
+    margin-top: 5px;
     color: #FFF;
 }
 
 footer .fonte-api a:hover {
     color: #ffd23f;
-    transition: 0.8s;
+    transition: 0.5s;
 }
 
 footer .fonte-api a svg {
     font-size: 90px;
 }
-
 footer .criador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .criador span {
+    margin-bottom: 0px;
 }
 
 footer .criador img {
-    width: 100px;
+    width: 80px;
     border-radius: 50%;
 }
 
-footer .redes-sociais a {
+footer .redes-sociais {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    
+}
+footer .redes-sociais a {
     text-decoration: none;
     color: #FFF;
     border: solid 2px rgba(0, 0, 0, 0.0);
     border-radius: 10px;
-    /* padding: 20px -0px 0px 0px; */
-}
-
-footer .redes-sociais a span {
-    margin-top: 18px;
+    padding: 8px;
 }
 
 footer .redes-sociais a:hover {
@@ -60,5 +66,5 @@ footer .redes-sociais a:hover {
 
 footer .redes-sociais a svg {
     font-size: 20px;
-    margin-right: 10px;
+    margin-bottom: -5px;
 }

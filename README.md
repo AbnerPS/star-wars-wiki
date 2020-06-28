@@ -40,12 +40,25 @@ Segue abaixo uma lista com as principais técnologias utilizados no desenvolvime
 
 ### 📚 Bibliotecas e Dependências
 - [x] [Axios](https://github.com/axios/axios)
-
+- [x] [RSuite](https://rsuitejs.com/)
+- [x] [Date-fns](https://date-fns.org/)
 
 # :computer: Print das Paginas
 
 <p align="center">
-  <img src="" alt="Home Page" width="800">
+  <img src="./src/screenshots/page-home-01.png" alt="Home Page" width="800">
+</p>
+
+<p align="center">
+  <img src="./src/screenshots/page-home-02.png" alt="Home Page" width="800">
+</p>
+
+<p align="center">
+  <img src="./src/screenshots/page-home-03.png" alt="Home Page" width="800">
+</p>
+
+<p align="center">
+  <img src="./src/screenshots/page-personagens-01.png" alt="Home Page" width="800">
 </p>
 
  # :tv: Redes Sociais

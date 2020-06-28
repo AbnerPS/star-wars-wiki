@@ -1,3 +1,9 @@
+#main h1 {
+    text-align: right;
+    margin-bottom: 10px;
+    margin-right: 100px;
+}
+
 #content {
     display: flex;
     justify-content: space-around;
@@ -5,7 +11,7 @@
     align-content: center;
 }
 
-#content .card {
+#content .card-personagem {
     display: flex;
     flex-direction: column;
     width: 17%;
@@ -16,13 +22,13 @@
     
 }
 
-#content .card:hover {
+#content .card-personagem:hover {
     box-shadow: 10px 10px #f5faff;
     background-color: rgba(37, 36, 34, 0.8);
     transition: 0.5s;
 }
 
-#content .card a{
+#content .card-personagem a{
     text-decoration: none;
     color: #000;
     background-color: #ffd23f;
@@ -33,7 +39,7 @@
     margin-top: 20px;
 }
 
-#content .card span {
+#content .card-personagem span {
     margin-top: 10px;
 }
 

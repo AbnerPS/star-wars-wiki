@@ -5,7 +5,7 @@
     align-content: center;
 }
 
-#content .card {
+#content .card-planetas {
     display: flex;
     flex-direction: column;
     width: 17%;
@@ -16,14 +16,14 @@
     
 }
 
-#content .card:hover {
+#content .card-planetas:hover {
     box-shadow: 10px 10px #f5faff;
     /* padding: 25px; */
     background-color: rgba(37, 36, 34, 0.8);
     transition: 0.5s;
 }
 
-#content .card a{
+#content .card-planetas a{
     text-decoration: none;
     color: #000;
     background-color: #ffd23f;
@@ -34,7 +34,7 @@
     margin-top: 20px;
 }
 
-#content .card span {
+#content .card-planetas span {
     margin-top: 10px;
 }
 

@@ -1,14 +1,9 @@
-/* paleta de cores 
-#252422
-#46494c
-#403d39
-#4c5c68
-#ffd23f*/
-
-
 .card {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     width: 21%;
     border-radius: 30px 2px;
     padding: 20px;
