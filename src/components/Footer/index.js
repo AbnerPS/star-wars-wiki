@@ -1,7 +1,6 @@
 import React from 'react'
 import { FaCodepen, FaLinkedin, FaGithub, FaJediOrder} from 'react-icons/fa'
-import foto from '../../assets/FotoPerfil.jpg'
-import './footer.css'
+import './styles.css'
 
 function Footer() {
     return (
@@ -9,8 +8,14 @@ function Footer() {
  
         <div className="fonte-api">
             <a href="https://swapi.dev/" target="_blank" rel="noopener noreferrer">
-                <span>Star Wars API <FaJediOrder/></span>
+                <FaJediOrder/>
+                <p>Star Wars API </p>
             </a>
+        </div>
+
+        <div className="criador">
+            <span>Desenvolvido por Abner Pereira Silva</span>
+            <span><strong>Desenvolvedor Full Stack</strong></span>      
         </div>
 
         <div className="redes-sociais">
@@ -27,14 +32,6 @@ function Footer() {
                     <FaGithub/>
                 </a>
         </div>
-        
-        <div className="criador">
-            <span>Desenvolvido por <strong>Abner Pereira Silva</strong></span>
-            <img src={foto} alt="Foto Perfil"/>
-            <span><strong>Desenvolvedor Full Stack</strong></span>      
-        </div>
-        
-        
     </footer>
     )
 }

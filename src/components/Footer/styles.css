@@ -14,19 +14,26 @@ footer span {
 }
 
 footer .fonte-api a{
+    display: flex;
     text-decoration: none;
     margin-top: 5px;
+    border: solid 2px transparent;
+    border-radius: 10px;
+    padding: 5px;
     color: #FFF;
+}
+
+footer .fonte-api a svg {
+    margin-right: 5px;
+    font-size: 20px;
 }
 
 footer .fonte-api a:hover {
     color: #ffd23f;
+    border-color: #ffd23f;
     transition: 0.5s;
 }
 
-footer .fonte-api a svg {
-    font-size: 90px;
-}
 footer .criador {
     display: flex;
     flex-direction: column;
@@ -45,8 +52,7 @@ footer .criador img {
 
 footer .redes-sociais {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     
 }
@@ -56,6 +62,7 @@ footer .redes-sociais a {
     border: solid 2px rgba(0, 0, 0, 0.0);
     border-radius: 10px;
     padding: 8px;
+    margin-right: 20px;
 }
 
 footer .redes-sociais a:hover {

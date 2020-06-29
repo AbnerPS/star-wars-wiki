@@ -11,54 +11,71 @@
     <img src="https://img.shields.io/github/license/AbnerPS/star-wars-wiki?color=yellow"/>
 </p>
 
-# :bulb: Sobre o projeto 
+# 🚀 Sobre o projeto 
 
-Conheça mais sobre os personagens, planetas e espaço-naves do universo Star Wars.
+A Star Wars Wiki é uma aplicação web com muitas informações sobre o universo da franquia Star Wars fornecidas pela [Star Wars API](https://swapi.dev/).
+Conheça mais sobre os filmes, personagens, planetas e espaço-naves do universo Star Wars. 🤓
 
 # ⚙️ Como executar
 
 
 Para executar e testar a aplicação na sua máquina, primeiramente clone o repositório no seu computador.
-Após clonar e ter todos os arquivos na sua maquina, entre na pasta raiz do repositório **"./"** e abra seu terminal nela.
+Após clonar e ter todos os arquivos na sua máquina, entre na pasta raiz do repositório **" ./ "** e abra seu terminal nela.
 
 No terminal, digite o seguinte comando para instalar todas as dependências:
 
+```bash
 $ npm install
+```
 
 Com todas as dependências instaladas, agora é só executar o seguinte comando:
 
+```bash
 $ npm start
+```
 
-**E pronto, agora você pode usar à vontade toda a aplicação.** :)
+**E pronto, agora você pode usar à vontade toda a aplicação.** 😁
 
 # 🧑🏽‍💻 Tecnologias
 
 Segue abaixo uma lista com as principais técnologias utilizados no desenvolvimento desta aplicação. Lembrando que tudo foi desenvolvido utilizando a linguagem [Javascript](https://www.javascript.org/).
 
 ### ⚛️ Frameworks
-- ⚛️ [React](https://pt-br.reactjs.org/)
+- [x] [React](https://pt-br.reactjs.org/)
 
 ### 📚 Bibliotecas e Dependências
 - [x] [Axios](https://github.com/axios/axios)
 - [x] [RSuite](https://rsuitejs.com/)
 - [x] [Date-fns](https://date-fns.org/)
 
-# :computer: Print das Paginas
+# :computer: Screenshots
 
 <p align="center">
-  <img src="./src/screenshots/page-home-01.png" alt="Home Page" width="800">
+  <img src="./src/screenshots/home-page-01.png" alt="Home Page" width="600">
 </p>
 
 <p align="center">
-  <img src="./src/screenshots/page-home-02.png" alt="Home Page" width="800">
+  <img src="./src/screenshots/home-page-02.png" alt="Home Page" width="600">
 </p>
 
 <p align="center">
-  <img src="./src/screenshots/page-home-03.png" alt="Home Page" width="800">
+  <img src="./src/screenshots/home-page-03.png" alt="Home Page" width="600">
 </p>
 
 <p align="center">
-  <img src="./src/screenshots/page-personagens-01.png" alt="Home Page" width="800">
+  <img src="./src/screenshots/characters-page-01.png" alt="Characters Page" width="600">
+</p>
+
+<p align="center">
+  <img src="./src/screenshots/characters-page-02.png" alt="Characters Page" width="600">
+</p>
+
+<p align="center">
+  <img src="./src/screenshots/planets-page-01.png" alt="Planets Page" width="600">
+</p>
+
+<p align="center">
+  <img src="./src/screenshots/starships-page-01.png" alt="Starships Page" width="600">
 </p>
 
  # :tv: Redes Sociais

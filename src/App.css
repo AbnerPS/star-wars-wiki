@@ -51,3 +51,55 @@ body {
     transform: rotate(360deg);
   }
 }
+
+#main .count {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+#main .count img {
+  width: 80px;
+  margin: 0px 20px;
+}
+
+.navigation-page {
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-page button {
+  font-size: 15px;
+  color: #000;
+  background-color: #ffd23f;
+  border: none;
+  width: 180px;
+  padding: 8px;
+}
+
+.navigation-page #btnPrevious {
+  margin-right: 20px;
+  border-radius: 2px 20px;
+}
+
+.navigation-page #btnNext {
+  margin-left: 20px;
+  border-radius: 20px 2px;
+}
+
+.navigation-page #btnPrevious:hover {
+  box-shadow: 10px 10px #f5faff;
+  margin-right: 50px;
+  transition: 0.5s;
+}
+
+.navigation-page #btnNext:hover {
+  box-shadow: -10px 10px #f5faff;
+  margin-left: 50px;
+  transition: 0.5s;
+}
+
+.navigation-page button svg {
+  margin: -4px 5px;
+  font-size: 20px;
+}

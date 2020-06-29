@@ -1,12 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
-import { FormattedMessage } from 'react-intl'
+import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
-import './personagens.css'
+import ImgPersonagem from '../../assets/stormtrooper.png'
+import './styles.css'
 
 
 const Home = () => {
@@ -36,42 +35,43 @@ const Home = () => {
     function handleNextPage() {
         const currentPage = page + 1
         setPage(currentPage)
-        console.log(page)
     }
 
     function handlePreviousPage() {
         const currentPage = page - 1
         setPage(currentPage)
-        console.log(page)
     }
 
     return (
         <div id="main">
             <Header/>
 
-            <h1>TOTAL DE PERSONAGENS: {countPersonagens}</h1>
+            <div className="count">
+                <h1>TOTAL CHARACTERS: {countPersonagens}</h1>
+                <img src={ImgPersonagem} alt="Imagem Personagem"/>
+            </div>
+
             <div id="content">
                 {personagens.map(personagens => (
                 <div className="card-personagem" key={personagens.name}>
                     <h2>{personagens.name}</h2>
-                    <span>Altura: {personagens.height / 100} m</span>
-                    <span>Peso: {personagens.mass} kg</span>
-                    <span>Cor do Cabelo: {personagens.hair_color}</span>
-                    <span>Cor da Pele: {personagens.skin_color}</span>
-                    <span>Cor dos Olhos: {personagens.eye_color}</span>
-                    <span>Data de Nascimento: {personagens.birth_year}</span>
-                    <span>Genero: {personagens.gender}</span>
-                    <span>Espécie: {personagens.species[0]}</span>
-                    <span>Planeta Natal: {personagens.homeworld}</span>
-                    <Link to="#">Detalhes</Link>
+                    <span>Height: {personagens.height / 100} m</span>
+                    <span>Mass: {personagens.mass} kg</span>
+                    <span>Hair Color: {personagens.hair_color}</span>
+                    <span>Skin Color: {personagens.skin_color}</span>
+                    <span>Eye Color: {personagens.eye_color}</span>
+                    <span>Birth Year: {personagens.birth_year}</span>
+                    <span>Gender: {personagens.gender}</span>
+                    <span>Species: {personagens.species[0]}</span>
+                    <span>Homeworld: {personagens.homeworld}</span>
                 </div>
                 ))}
                 
             </div>
             <div className="navigation-page">
-                <button id="btnPrevious" onClick={handlePreviousPage}><FaArrowCircleLeft/>PÁGINA ANTERIOR</button>
+                <button id="btnPrevious" onClick={handlePreviousPage}><FaArrowCircleLeft/>PREVIOUS PAGE</button>
 
-                <button id="btnNext" onClick={handleNextPage}>PRÓXIMA PÁGINA<FaArrowCircleRight/></button>
+                <button id="btnNext" onClick={handleNextPage}>NEXT PAGE<FaArrowCircleRight/></button>
             </div>
             <Footer/>
         </div>

@@ -1,11 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
-import './planetas.css'
+import ImgPlanetas from '../../assets/planeta.png'
+import './styles.css'
 
 
 const Planetas = () => {
@@ -21,6 +21,7 @@ const Planetas = () => {
             setCountPlanetas(contagem)
             setPlanetas(planetas)
 
+            // paginação
             response.data.next === null ?
             document.getElementById('btnNext').style.display = 'none' :
             document.getElementById('btnNext').style.display = 'block'
@@ -34,42 +35,43 @@ const Planetas = () => {
     function handleNextPage() {
         const currentPage = page + 1
         setPage(currentPage)
-        console.log(page)
     }
 
     function handlePreviousPage() {
         const currentPage = page - 1
         setPage(currentPage)
-        console.log(page)
     }
 
     return (
         <div id="main">
             <Header/>
 
-            <h1>TOTAL DE PLANETAS: {countPlanetas}</h1>
+            <div className="count">
+                <h1>TOTAL PLANETS: {countPlanetas}</h1>
+                <img src={ImgPlanetas} alt="Imagem Planeta"/>
+            </div>
+            
             <div id="content">
                 {planetas.map(planetas => (
                     <div className="card-planetas" key={planetas.name}>
                     <h2>{planetas.name}</h2>
-                    <span>Periodo de Rotação: {planetas.rotation_period}</span>
-                    <span>Periodo de Orbita: {planetas.orbital_period}</span>
-                    <span>Diametro: {planetas.diameter}</span>
-                    <span>Clima: {planetas.climate}</span>
-                    <span>Gravidade: {planetas.gravity}</span>
-                    <span>Terreno: {planetas.terrain}</span>
-                    <span>Água na Superfície: {planetas.surface_water}</span>
-                    <span>População: {planetas.population}</span>
-                    <span>Residentes: {planetas.residents[0]}</span> {/*Fazer um map neste array*/}
-                    <Link to="#">Detalhes</Link>
+                    <span>Rotation Period: {planetas.rotation_period}</span>
+                    <span>Orbital Period: {planetas.orbital_period}</span>
+                    <span>Diameter: {planetas.diameter}</span>
+                    <span>Climate: {planetas.climate}</span>
+                    <span>Gravity: {planetas.gravity}</span>
+                    <span>Terrain: {planetas.terrain}</span>
+                    <span>Surface Water: {planetas.surface_water}</span>
+                    <span>Population: {planetas.population}</span>
+                    <span>Residents: {planetas.residents[0]}</span>
                 </div>
                 ))}
             </div>
 
             <div className="navigation-page">
-                <button id="btnPrevious" onClick={handlePreviousPage}><FaArrowCircleLeft/>PÁGINA ANTERIOR</button>
+                <button id="btnPrevious" onClick={handlePreviousPage}><FaArrowCircleLeft/>PREVIOUS PAGE</button>
 
-                <button id="btnNext" onClick={handleNextPage}>PRÓXIMA PÁGINA<FaArrowCircleRight/></button>
+                <button id="btnNext" onClick={handleNextPage}>NEXT PAGE<FaArrowCircleRight/></button>
             </div>
 
             <Footer/>

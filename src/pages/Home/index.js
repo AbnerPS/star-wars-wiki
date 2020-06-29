@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import logo from '../../assets/logoYellow.png'
-import Card from '../../components/Card'
 import { Timeline } from 'rsuite'
 import { format } from 'date-fns'
-import { FaJediOrder } from 'react-icons/fa'
+import { FaJediOrder, FaEye } from 'react-icons/fa'
 import ImgPersonagens from '../../assets/stormtrooper.png'
 import ImgPlanetas from '../../assets/planeta.png'
 import ImgNaves from '../../assets/nave.png'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
+import logo from '../../assets/logoYellow.png'
 import 'rsuite/dist/styles/rsuite-default.css'
-import './home.css'
+import './styles.css'
 
 const Home = () => {
   const [filmes, setFilmes] = useState([])
@@ -26,59 +25,57 @@ const Home = () => {
 
     return (
         <div id="home-page">
-            <Header/>
+            <Header url="home"/>
 
             <div className="content">
                 <img src={logo} alt="Logo Star Wars"/>
                 <section>
-                    <p>Star Wars Wiki, a wikipedia mais completa sobre o universo Star Wars</p>
-                    <p>Aqui você encontra todo que precisa saber sobre o universo de Star Wars</p>
+                    <h1>Star Wars Wiki</h1>
+                    <p>Star Wars Wiki, the most complete wikipedia about the Star Wars universe.</p>
+                    <p>Here you find everything you need to know about the Star Wars universe.</p>
                 </section>
 
                 <div className="spotlight">
-                    <Card url="/personagens" conteudo={(
-                        <div className="card-spotlight">
+                    <div className="card-spotlight">
                             <img src={ImgPersonagens} alt="Icone Personagens"></img>
                             <div>
-                                <h1>Personagens</h1>
-                                <p>Aqui você encontra informações sobre todos os personagens da franquia Star Wars</p>
+                                <h1>Characters</h1>
+                                <p>Here you can find information about all the characters in the Star Wars franchise.</p>
+                                <Link to="/personagens">View more <FaEye/></Link>
                             </div>
                         </div>
-                    )}/>
 
-                    <Card url="/planetas" conteudo={(
                         <div className="card-spotlight">
                             <img src={ImgPlanetas} alt="Icone Planetas"></img>
                             <div>
-                                <h1>Planetas</h1>
-                                <p>Aqui você encontra informações sobre todos os planetas da franquia Star Wars</p>
+                                <h1>Planets</h1>
+                                <p>Here you can find information about all the planets in the Star Wars franchise.</p>
+                                <Link to="/planetas">View more <FaEye/></Link>
                             </div>
                         </div>
-                    )}/>
 
-                    <Card url="/espaco-naves" conteudo={(
                         <div className="card-spotlight">
                             <img src={ImgNaves} alt="Icone Espaço-Naves"></img>
                             <div>
-                                <h1>Espaço-Naves</h1>
-                                <p>Aqui você encontra informações sobre todas as Espaço-Naves da franquia Star Wars</p>
+                                <h1>Startships</h1>
+                                <p>Here you can find information about all the starships in the Star Wars franchise.</p>
+                                <Link to="/espaco-naves">View more <FaEye/></Link>
                             </div>
                         </div>
-                    )}/>
                 </div>
                 
                 <section className="section-timeline">
-                <Timeline className="timeline" >
-                  <h2>Filmes classicos da fraquia Star Wars</h2>
-                {filmes.map(filme => (
-                  <Timeline.Item dot={<FaJediOrder/>}>
-                  <h3>{filme.title}</h3>
-                  <strong>Episodeo {filme.episode_id}</strong>
-                  <p>{format(new Date(filme.release_date), 'dd/MM/yyyy')}</p>
-                  <p>{filme.opening_crawl}</p>
-                </Timeline.Item>
-                ))}
-                </Timeline>
+                <h2>Classic Star Wars Movies</h2>
+                    <Timeline className="timeline" >
+                        {filmes.map(filme => (
+                        <Timeline.Item dot={<FaJediOrder/>}>
+                            <h3>{filme.title}</h3>
+                            <strong>Episode {filme.episode_id}</strong>
+                            <p>{format(new Date(filme.release_date), 'dd/MM/yyyy')}</p>
+                            <p>{filme.opening_crawl}</p>
+                        </Timeline.Item>
+                        ))}
+                    </Timeline>
                 </section>
             </div>
             <Footer/>

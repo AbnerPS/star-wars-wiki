@@ -1,9 +1,3 @@
-#main h1 {
-    text-align: right;
-    margin-bottom: 10px;
-    margin-right: 100px;
-}
-
 #content {
     display: flex;
     justify-content: space-around;
@@ -41,35 +35,4 @@
 
 #content .card-personagem span {
     margin-top: 10px;
-}
-
-.navigation-page {
-    display: flex;
-    justify-content: space-around;
-}
-
-.navigation-page button {
-    font-size: 15px;
-    color: #000;
-    background-color: #ffd23f;
-    padding: 8px;
-    border: none;
-    border-radius: 10px;
-}
-
-.navigation-page #btnPrevious:hover {
-    border-radius: 2px 20px;
-    padding: 10px;
-    transition: 0.5s;
-}
-
-.navigation-page #btnNext:hover {
-    border-radius: 20px 2px;
-    padding: 10px;
-    transition: 0.5s;
-}
-
-.navigation-page button svg {
-    margin: 0px 5px;
-    font-size: 20px;
 }

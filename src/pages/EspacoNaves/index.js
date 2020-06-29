@@ -1,11 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
-import './naves.css'
+import ImgNaves from '../../assets/nave.png'
+import './styles.css'
 
 
 const EspacoNaves = () => {
@@ -21,6 +21,7 @@ const EspacoNaves = () => {
             setCountEspacoNaves(contagem)
             setEspacoNaves(naves)
 
+            //paginação
             response.data.next === null ?
             document.getElementById('btnNext').style.display = 'none' :
             document.getElementById('btnNext').style.display = 'block'
@@ -34,45 +35,46 @@ const EspacoNaves = () => {
     function handleNextPage() {
         const currentPage = page + 1
         setPage(currentPage)
-        console.log(page)
     }
 
     function handlePreviousPage() {
         const currentPage = page - 1
         setPage(currentPage)
-        console.log(page)
     }
 
     return (
         <div id="main">
             <Header/>
 
-            <h1>TOTAL DE ESPAÇO NAVES: {countEspacoNaves}</h1>
+            <div className="count">
+                <h1>TOTAL STARSHIPS: {countEspacoNaves}</h1>
+                <img src={ImgNaves} alt="Imagem Espaço-Nave"/>
+            </div>
+            
             <div id="content">
                 {espacoNaves.map(espacoNaves => (
                     <div className="card-naves" key={espacoNaves.name}>
                     <h2>{espacoNaves.name}</h2>
-                    <span>Modelo: {espacoNaves.model}</span>
-                    <span>Fabricante: {espacoNaves.manufacturer}</span>
-                    <span>Custo em créditos: {espacoNaves.cost_in_credits}</span>
-                    <span>Comprimento: {espacoNaves.length}</span>
-                    <span>Velocidade Máxima de Atmosfera: {espacoNaves.max_atmosphering_speed}</span>
-                    <span>Tripulação: {espacoNaves.crew}</span>
-                    <span>Passageiros: {espacoNaves.passengers}</span>
-                    <span>Capacidade de Carga: {espacoNaves.cargo_capacity}</span>
-                    <span>Consumíveis: {espacoNaves.consumables}</span>
-                    <span>Classificação Hyperdrive: {espacoNaves.hyperdrive_rating}</span>
+                    <span>Model: {espacoNaves.model}</span>
+                    <span>Manufacturer: {espacoNaves.manufacturer}</span>
+                    <span>Cost in Credits: {espacoNaves.cost_in_credits}</span>
+                    <span>Length: {espacoNaves.length}</span>
+                    <span>max_atmosphering_speed: {espacoNaves.max_atmosphering_speed}</span>
+                    <span>Crew: {espacoNaves.crew}</span>
+                    <span>Passengers: {espacoNaves.passengers}</span>
+                    <span>Cargo Capacity: {espacoNaves.cargo_capacity}</span>
+                    <span>Consumables: {espacoNaves.consumables}</span>
+                    <span>Hyperdrive Rating: {espacoNaves.hyperdrive_rating}</span>
                     <span>MGLT: {espacoNaves.MGLT}</span>
-                    <span>Classe da Nave: {espacoNaves.starship_class}</span>
-                    <span>Pilotos: {espacoNaves.pilots[0]}</span>
-                    <Link to="#">Detalhes</Link>
+                    <span>Starship Class: {espacoNaves.starship_class}</span>
+                    <span>Pilots: {espacoNaves.pilots[0]}</span>
                 </div>
                 ))}
             </div>
             <div className="navigation-page">
-                <button id="btnPrevious" onClick={handlePreviousPage}><FaArrowCircleLeft/>PÁGINA ANTERIOR</button>
+                <button id="btnPrevious" onClick={handlePreviousPage}><FaArrowCircleLeft/>PREVIOUS PAGE</button>
 
-                <button id="btnNext" onClick={handleNextPage}>PRÓXIMA PÁGINA<FaArrowCircleRight/></button>
+                <button id="btnNext" onClick={handleNextPage}>NEXT PAGE<FaArrowCircleRight/></button>
             </div>
 
             <Footer/>

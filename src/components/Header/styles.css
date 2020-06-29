@@ -1,6 +1,5 @@
-header {
+header .nav-main{
     display: flex;
-    font-family: Starjedi;
     justify-content: space-around;
     align-items: center;
     background-color: rgba(37, 36, 34, 0.8);
@@ -8,23 +7,27 @@ header {
     margin-bottom: 20px;
 }
 
-header .menu-bar a{
+header .nav-main ul {
+    display: flex;
+    list-style: none;
+}
+
+header .nav-main ul li a{
     font-size: 18px;
     text-decoration: none;
     color: #FFF;
     border-radius: 10px;
     padding: 2px 10px;
     margin: 0px 20px;
-    font-family: 'Cairo', sans-serif;
 }
 
-header .menu-bar svg {
-    font-size: 30px;
-    margin-right: 20px;
-}
-
-header .menu-bar a:hover {
+header .nav-main ul li a:hover {
      color: #ffd23f;
      border-bottom: solid 2px #ffd23f;
      transition: 0.2s;
+}
+
+header .nav-main ul li .selected {
+    color: #ffd23f;
+    border-bottom: solid 2px #ffd23f;
 }
