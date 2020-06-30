@@ -16,6 +16,10 @@
 A Star Wars Wiki é uma aplicação web com muitas informações sobre o universo da franquia Star Wars fornecidas pela [Star Wars API](https://swapi.dev/).
 Conheça mais sobre os filmes, personagens, planetas e espaço-naves do universo Star Wars. 🤓
 
+<p align="center">
+  <img src="./src/screenshots/star-wars-wiki.gif" alt="GIF da pagina" width="600">
+</p>
+
 # ⚙️ Como executar
 
 
