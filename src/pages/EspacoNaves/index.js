@@ -12,6 +12,7 @@ const EspacoNaves = () => {
     const [page, setPage] = useState(1)
     const [countEspacoNaves, setCountEspacoNaves] = useState(0)
     const [espacoNaves, setEspacoNaves] = useState([])
+    const [pilotos, setPilotos] = useState([])
 
     useEffect(() => {
         axios.get(`https://swapi.dev/api/starships/?page=${page}`).then(response => {
@@ -29,6 +30,14 @@ const EspacoNaves = () => {
             response.data.previous === null ?
             document.getElementById('btnPrevious').style.display = 'none' :
             document.getElementById('btnPrevious').style.display = 'block'
+        })
+    }, [page])
+
+    useEffect(() => {
+        axios.get(`https://swapi.dev/api/people/?page=${page}`).then(response => {
+            const pilotos = response.data.results
+            const nomePilotos = pilotos.map(piloto => piloto.name)
+            setPilotos(nomePilotos)
         })
     }, [page])
 
@@ -67,7 +76,9 @@ const EspacoNaves = () => {
                     <span>Hyperdrive Rating: {espacoNaves.hyperdrive_rating}</span>
                     <span>MGLT: {espacoNaves.MGLT}</span>
                     <span>Starship Class: {espacoNaves.starship_class}</span>
-                    <span>Pilots: {espacoNaves.pilots[0]}</span>
+                    <span>Pilots: {
+                    pilotos[String(espacoNaves.pilots[0]).substr(28, 3).replace('/', '') - 1]
+                    }</span>
                 </div>
                 ))}
             </div>

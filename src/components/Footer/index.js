@@ -14,8 +14,8 @@ function Footer() {
         </div>
 
         <div className="criador">
-            <span>Desenvolvido por Abner Pereira Silva</span>
-            <span><strong>Desenvolvedor Full Stack</strong></span>      
+            <span>Developed by Abner Pereira Silva</span>
+            <span><strong>Full Stack Developer</strong></span>  
         </div>
 
         <div className="redes-sociais">

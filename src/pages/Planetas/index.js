@@ -12,6 +12,7 @@ const Planetas = () => {
     const [page, setPage] = useState(1)
     const [countPlanetas, setCountPlanetas] = useState(0)
     const [planetas, setPlanetas] = useState([])
+    const [habitantes, setHabitantes] = useState([])
 
     useEffect(() => {
         axios.get(`https://swapi.dev/api/planets/?page=${page}`).then(response => {
@@ -29,6 +30,14 @@ const Planetas = () => {
             response.data.previous === null ?
             document.getElementById('btnPrevious').style.display = 'none' :
             document.getElementById('btnPrevious').style.display = 'block'
+        })
+    }, [page])
+
+    useEffect(() => {
+        axios.get(`https://swapi.dev/api/people/?page=${page}`).then(response => {
+            const pessoas = response.data.results
+            const nomePessoa = pessoas.map(pessoa => pessoa.name)
+            setHabitantes(nomePessoa)
         })
     }, [page])
 
@@ -63,7 +72,9 @@ const Planetas = () => {
                     <span>Terrain: {planetas.terrain}</span>
                     <span>Surface Water: {planetas.surface_water}</span>
                     <span>Population: {planetas.population}</span>
-                    <span>Residents: {planetas.residents[0]}</span>
+                    <span>Residents: {
+                    habitantes[String(planetas.residents[0]).substr(28, 3).replace('/', '') - 1]
+                    }</span>
                 </div>
                 ))}
             </div>
