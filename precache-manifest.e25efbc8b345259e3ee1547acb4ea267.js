@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "771dc4966006d544b4d9974cb62d148f",
+    "revision": "febd6632daf91bcfd186dc23f2e4a9b1",
     "url": "/star-wars-wiki/index.html"
   },
   {
-    "revision": "60c7cbd5bdc31e41a72f",
+    "revision": "2e03ed4d10e1ac65d650",
     "url": "/star-wars-wiki/static/css/2.f005c5ff.chunk.css"
   },
   {
-    "revision": "484e366477543be77044",
-    "url": "/star-wars-wiki/static/css/main.ba8e01aa.chunk.css"
+    "revision": "f0316f82615d137c395c",
+    "url": "/star-wars-wiki/static/css/main.d01ab2e6.chunk.css"
   },
   {
-    "revision": "60c7cbd5bdc31e41a72f",
-    "url": "/star-wars-wiki/static/js/2.a2cb940c.chunk.js"
+    "revision": "2e03ed4d10e1ac65d650",
+    "url": "/star-wars-wiki/static/js/2.bd92c193.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/star-wars-wiki/static/js/2.a2cb940c.chunk.js.LICENSE.txt"
+    "url": "/star-wars-wiki/static/js/2.bd92c193.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "484e366477543be77044",
-    "url": "/star-wars-wiki/static/js/main.725028f2.chunk.js"
+    "revision": "f0316f82615d137c395c",
+    "url": "/star-wars-wiki/static/js/main.e426b026.chunk.js"
   },
   {
     "revision": "b72abadad035dc467323",
