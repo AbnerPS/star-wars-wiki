@@ -7,6 +7,10 @@ header .nav-main{
     margin-bottom: 20px;
 }
 
+header .nav-main img {
+    width: 500px;
+}
+
 header .nav-main ul {
     display: flex;
     list-style: none;
