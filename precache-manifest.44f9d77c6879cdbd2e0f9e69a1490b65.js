@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "febd6632daf91bcfd186dc23f2e4a9b1",
+    "revision": "db67fb3b4f3742f9af34c885d74b1c10",
     "url": "/star-wars-wiki/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/star-wars-wiki/static/css/2.f005c5ff.chunk.css"
   },
   {
-    "revision": "f0316f82615d137c395c",
-    "url": "/star-wars-wiki/static/css/main.d01ab2e6.chunk.css"
+    "revision": "d92142f205c7499ce610",
+    "url": "/star-wars-wiki/static/css/main.10407bbe.chunk.css"
   },
   {
     "revision": "2e03ed4d10e1ac65d650",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/star-wars-wiki/static/js/2.bd92c193.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f0316f82615d137c395c",
-    "url": "/star-wars-wiki/static/js/main.e426b026.chunk.js"
+    "revision": "d92142f205c7499ce610",
+    "url": "/star-wars-wiki/static/js/main.0c234703.chunk.js"
   },
   {
     "revision": "b72abadad035dc467323",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1e9cd186b02026e9e7543dc7a5e7fd43",
     "url": "/star-wars-wiki/static/media/background.1e9cd186.webp"
+  },
+  {
+    "revision": "93d3a123d60d21cd6a693ec7c912d1e0",
+    "url": "/star-wars-wiki/static/media/logoHorizontal.93d3a123.svg"
   },
   {
     "revision": "f5bdff6225b63923b571d039f42d4519",
