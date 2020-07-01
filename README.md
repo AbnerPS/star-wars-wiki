@@ -13,7 +13,7 @@
 
 # 🚀 Sobre o projeto 
 
-A Star Wars Wiki é uma aplicação web com muitas informações sobre o universo da franquia Star Wars fornecidas pela [Star Wars API](https://swapi.dev/).
+A [Star Wars Wiki](https://AbnerPS.github.io/star-wars-wiki) é uma aplicação web com muitas informações sobre o universo da franquia Star Wars fornecidas pela [Star Wars API](https://swapi.dev/).
 Conheça mais sobre os filmes, personagens, planetas e espaço-naves do universo Star Wars. 🤓
 
 # ⚙️ Como executar

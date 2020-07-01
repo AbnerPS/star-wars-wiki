@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa'
 import Header from '../../components/Header'
@@ -25,13 +24,13 @@ const Home = () => {
 
             // paginação
             response.data.next === null ?
-            document.getElementById('btnNext').style.display = 'none' :
-            document.getElementById('btnNext').style.display = 'block'
+                document.getElementById('btnNext').style.display = 'none' :
+                document.getElementById('btnNext').style.display = 'block'
 
             response.data.previous === null ?
-            document.getElementById('btnPrevious').style.display = 'none' :
-            document.getElementById('btnPrevious').style.display = 'block'
-            
+                document.getElementById('btnPrevious').style.display = 'none' :
+                document.getElementById('btnPrevious').style.display = 'block'
+
         })
     }, [page])
 
@@ -48,10 +47,10 @@ const Home = () => {
             const planetas = response.data.results
             const nomePlanetas = planetas.map(planeta => planeta.name)
             setPlanetaNatal(nomePlanetas)
-            
+
         })
     }, [page])
-    
+
     function handleNextPage() {
         const currentPage = page + 1
         setPage(currentPage)
@@ -64,40 +63,40 @@ const Home = () => {
 
     return (
         <div id="main">
-            <Header/>
+            <Header />
 
             <div className="count">
                 <h1>TOTAL CHARACTERS: {countPersonagens}</h1>
-                <img src={ImgPersonagem} alt="Imagem Personagem"/>
+                <img src={ImgPersonagem} alt="Imagem Personagem" />
             </div>
 
             <div id="content">
                 {personagens.map(personagens => (
-                <div className="card-personagem" key={personagens.name}>
-                    <h2>{personagens.name}</h2>
-                    <span>Height: {personagens.height / 100} m</span>
-                    <span>Mass: {personagens.mass} kg</span>
-                    <span>Hair Color: {personagens.hair_color}</span>
-                    <span>Skin Color: {personagens.skin_color}</span>
-                    <span>Eye Color: {personagens.eye_color}</span>
-                    <span>Birth Year: {personagens.birth_year}</span>
-                    <span>Gender: {personagens.gender}</span>
-                    <span>Species: {
-                    especies[String(personagens.species[0]).substr(29, 3).replace('/', '') - 1]
-                    }</span>
-                    <span>Homeworld: {
-                    planetaNatal[String(personagens.homeworld).substr(29, 3).replace('/', '') - 1]
-                    }</span>
-                </div>
+                    <div className="card-personagem" key={personagens.name}>
+                        <h2>{personagens.name}</h2>
+                        <span>Height: {personagens.height / 100} m</span>
+                        <span>Mass: {personagens.mass} kg</span>
+                        <span>Hair Color: {personagens.hair_color}</span>
+                        <span>Skin Color: {personagens.skin_color}</span>
+                        <span>Eye Color: {personagens.eye_color}</span>
+                        <span>Birth Year: {personagens.birth_year}</span>
+                        <span>Gender: {personagens.gender}</span>
+                        <span>Species: {
+                            especies[String(personagens.species[0]).substr(29, 3).replace('/', '') - 1]
+                        }</span>
+                        <span>Homeworld: {
+                            planetaNatal[String(personagens.homeworld).substr(29, 3).replace('/', '') - 1]
+                        }</span>
+                    </div>
                 ))}
-                
+
             </div>
             <div className="navigation-page">
-                <button id="btnPrevious" onClick={handlePreviousPage}><FaArrowCircleLeft/>PREVIOUS PAGE</button>
+                <button id="btnPrevious" onClick={handlePreviousPage}><FaArrowCircleLeft />PREVIOUS PAGE</button>
 
-                <button id="btnNext" onClick={handleNextPage}>NEXT PAGE<FaArrowCircleRight/></button>
+                <button id="btnNext" onClick={handleNextPage}>NEXT PAGE<FaArrowCircleRight /></button>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     )
 }
